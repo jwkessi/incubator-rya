@@ -27,7 +27,7 @@ under the License.
 
     <groupId>org.apache.rya</groupId>
     <artifactId>rya-project</artifactId>
-    <version>3.2.10-ccri</version>
+    <version>3.2.10-ccri-1.2.6</version>
 
     <packaging>pom</packaging>
 
@@ -74,7 +74,7 @@ under the License.
 
         <pig.version>0.9.2</pig.version> <!-- Newest: 0.15.0 -->
 
-        <geomesa.version>1.2.0</geomesa.version> <!-- Newest: 1.2.0 -->
+        <geomesa.version>1.2.6</geomesa.version> <!-- Newest: 1.2.0 -->
         <lucene.version>3.6.2</lucene.version> <!-- Newest: 5.3.1 -->
         <joda-time.version>2.1</joda-time.version> <!-- Newest: 2.9.1 -->
 
@@ -642,32 +642,6 @@ under the License.
 
         <plugins>
             <plugin>
-                <!-- Apache Release Audit Tool - reports missing license headers and other issues. -->
-                <groupId>org.apache.rat</groupId>
-                <artifactId>apache-rat-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>check-licenses</id>
-                        <goals>
-                            <goal>check</goal>
-                        </goals>
-                    <configuration>
-                        <excludes>
-                            <!-- RDF data Files -->
-                            <exclude>**/*.ntriples</exclude>
-                            <exclude>**/*.trig</exclude>
-                            <exclude>**/*.ttl</exclude>
-                            <exclude>**/*.owl</exclude>
-                            <exclude>**/*.nt</exclude>
-
-                            <!-- Services Files -->
-                            <exclude>**/resources/META-INF/services/**</exclude>
-                        </excludes>
-                    </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
                 <artifactId>maven-source-plugin</artifactId>
                 <executions>
                     <execution>
@@ -718,7 +692,7 @@ under the License.
     <scm>
         <connection>scm:git:git://git.apache.org/incubator-rya.git</connection>
         <developerConnection>scm:git:https://git-wip-us.apache.org/repos/asf/incubator-rya.git</developerConnection>
-        <tag>v3.2.10-ccri</tag>
+        <tag>v3.2.10-ccri-1.2.6</tag>
         <url>https://git-wip-us.apache.org/repos/asf?p=incubator-rya.git</url>
     </scm>
 </project>
